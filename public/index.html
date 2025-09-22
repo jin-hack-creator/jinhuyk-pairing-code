@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINHUYK-MD | Pairing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JINHUYK-MD Pairing</h1>
+            <p>Generate your session ID for Jinhuyk-MD Bot.</p>
+        </header>
+        <main>
+            <div class="form-container">
+                <input type="text" id="phone" placeholder="Enter phone number (for pairing code)">
+                <div class="button-group">
+                    <button id="pair-button">Get Pairing Code</button>
+                    <button id="qr-button">Get QR Code</button>
+                </div>
+            </div>
+            <div class="info-container">
+                <div id="qr-code-container" class="hidden">
+                    <h2>Scan QR Code:</h2>
+                    <div id="qr-code"></div>
+                </div>
+                <div id="pairing-code-container" class="hidden">
+                    <h2>Your Pairing Code:</h2>
+                    <p id="pairing-code"></p>
+                </div>
+                <div id="session-id-container" class="hidden">
+                    <h2>Your Session ID:</h2>
+                    <textarea id="session-id" readonly></textarea>
+                    <button id="copy-button">Copy</button>
+                </div>
+                <div id="status-container">
+                    <h2>Status:</h2>
+                    <div id="status-log"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Powered by JINHUYK</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

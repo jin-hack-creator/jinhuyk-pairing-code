@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyButton = document.getElementById('copy-button');
     const statusLog = document.getElementById('status-log');
 
-    const ws = new WebSocket(`ws://${window.location.host}`);
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const ws = new WebSocket(`${protocol}//${window.location.host}`);
 
     const logStatus = (message) => {
         const p = document.createElement('p');

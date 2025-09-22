@@ -78,7 +78,7 @@ async function saveState() {
         }
         const credsData = fs.readFileSync(credsPath, 'utf-8');
         const base64Creds = Buffer.from(credsData).toString('base64');
-        const sessionId = `JINHUYK-MD;;;${base64Creds}`;
+        const sessionId = `JINHUYK;;;${base64Creds}`;
         logger.info('Broadcasting session data');
         broadcast('session', sessionId);
     } catch (error) {

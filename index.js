@@ -113,6 +113,33 @@ async function startWhatsApp(phone = null) {
                 await saveState();
                 logger.info('Connected to WhatsApp Servers.');
                 broadcast('status', 'Connected! Session ID generated.');
+
+                const welcomeMessage = `
+🎉 *Welcome to JINHUYK-HACK-MD!* 🚀  
+
+✅ *Successfully Configured!*
+✔️ Session Created & Secured
+
+🔒 *Your Session ID* is ready!  
+⚠️ _Keep it private and secure - don't share it with anyone._ 
+
+💡 *What's Next?* 
+1️⃣ Explore all the cool features
+2️⃣ Check /menu for commands
+3️⃣ Enjoy seamless automation! 🤖  
+
+⭐ *GitHub:* 
+👉 https://github.com/jin-hack-creator/JINHUYK-HACK-MD  
+
+📞 *Contact:*
+👉 +242067274660
+
+🚀 _Thanks for choosing JINHUYK-HACK-MD!_ ✨
+`;
+                await sock.sendMessage(sock.user.id, {
+                    image: { url: 'https://i.postimg.cc/sx2KY0mS/JINHUYK-MD-V1.jpg' },
+                    caption: welcomeMessage
+                });
             }
 
             if (connection === 'close') {
